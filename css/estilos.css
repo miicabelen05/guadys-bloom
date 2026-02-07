@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 15px;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 40px;
+}
+
+.video-presentacion {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.video-presentacion iframe {
+  max-width: 100%;
+  border: none;
+}
+
+.card {
+    width: 18rem;
+    margin-bottom: 20px;    
+}
+
+.producto {
+    background-color: rgba(217, 44, 199, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 10px;
+}
+
+/*==================== */
+/* RESPONSIVE MOVILE */
+/*==================== */
+
+@media (max-width: 768px) {
+
+    body {
+        background-position: center;
+        }
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
