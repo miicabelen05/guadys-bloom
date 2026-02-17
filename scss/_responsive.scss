@@ -1,0 +1,147 @@
+@media (max-width: 768px) {
+
+    body {
+        background-position: center;
+    }
+
+    header img {
+        width: 160px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    /* NAV */
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar-custom .navbar-collapse {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+
+    .nav-custom .nav-link {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* HERO / BIENVENIDA */
+    .bienvenida {
+        padding: 50px 15px;
+        text-align: center;
+    
+        h1 {
+        font-size: 2rem;
+        }
+    
+        .subtitulo {
+        font-size: 1.1rem;
+        }
+    }
+
+    .linea-decorativa p {
+        font-size: 0.9rem;
+    }
+
+    /* DESTACADOS */
+    .contenedor-destacados {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contenedor-testimonios {
+        grid-template-columns: 1fr;
+    }
+
+    .card-destacado {
+        width: 85%;
+        max-width: 85%;
+        align-items: center;
+        align-self: center;
+    }
+
+    /* DIFERENCIALES */
+    .diferenciales-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .diferenciales-grid p,
+    .beneficio p {
+        text-align: center;
+    }
+    
+
+    /* TESTIMONIOS */
+    .testimonios-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* PRODUCTOS */
+    .productos {
+        grid-template-columns: 1fr;
+    
+        .card-producto {
+            flex: none;
+            width: 95%;
+            max-width: 95%;
+        }
+    }
+
+    .card-producto {
+        padding: 20px;
+    
+        .card-body {
+            min-height: auto;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+
+    .lista-productos {
+        grid-template-columns: 1fr;
+    }
+
+    /* CTA*/
+
+    .cta-final {
+        padding: 60px 20px;
+        margin: 50px 15px;
+    
+        h2 {
+        font-size: 1.6rem;
+        }
+    }
+
+    /* CONTACTO */
+    .contacto-contenido {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .info-contacto,
+    .formulario-contacto {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* BOTON VER MAS */
+
+.ver-mas {
+    width: auto;
+    display: inline-flex;
+    padding: 6px 16px;
+    align-self: center;
+}

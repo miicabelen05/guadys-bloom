@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto|🌸Guady´s Bloom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Guady´s Bloom</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <img src="../img/logo.jpg" alt="Guady´s Bloom Logo">
+    </header>
+
+    <main class="contacto">
+        <section class="contacto-intro">
+            <h1>Contacto</h1>
+            <p>💌¿Tenés alguna consulta, o queres hacer un pedido personalizado?</p>
+            <p>Estamos aquí para ayudarte, no dudes en contactarnos!</p>
+
+            <div class="decoracion-contacto">
+                🌸
+            </div>
+            
+        </section>
+
+        <section class="contacto-contenido">
+
+            <!--IZQUIDERDA-->
+            <div class="info-contacto">
+                <h2>Información de Contacto</h2>
+                <h3>Podés escribirnos a través de nuestras redes sociales:</h3>
+                <p>
+                    <i class="bi bi-instagram"></i>
+                    <a href="https://www.instagram.com/guadysbloom/" target="_blank">@guadysbloom </a>
+                </p>
+                <p>
+                    <i class="bi bi-facebook"></i>
+                    <a href="https://www.facebook.com/guadysbloom" target="_blank">Guady´s Bloom </a>
+                </p>
+                <p>
+                    <i class="bi bi-whatsapp"></i>
+                    <a href="https://wa.me/5491122935624" target="_blank">+54 9 11 2293-5624 </a>
+                </p>
+                <p>
+                    
+                    <i class="bi bi-envelope"></i>
+                    <a href="mailto:guadysbloom@gmail.com">guadysbloom@gmail.com </a>
+                </p>
+            
+
+                <section class="horarios">
+                    <h3>📍 Información Adicional</h3>
+                    <p>Atendemos consultas de Lunes a Viernes de 9 a 18hs.</p>
+                    <p>Realizamos envíos a todo el país.</p>
+                </section>
+
+            </div>
+        
+            <!--DERECHA-->
+            <div class="formulario-contacto">
+                <h2> <i class="bi bi-chat-dots"></i>Envianos un mensaje</h2>
+                <form action="https://formspree.io/f/mlgwnzzb" method="POST">
+                    
+                    <input type="hidden" name="_subject" value="💫Nuevo mensaje desde Guady´s Bloom💫">
+
+                    <label for="name"> 👩🏻 Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+               
+                    <label for="email"> 💌 Email</label>
+                    <input type="email" class="form-control" id="email" name="_replyto" required>
+
+                    <label for="telefono"> 📱 Celular/Whatsapp</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                                    
+                    <label for="message"> 🖊️ Mensaje</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+               
+                    <button type="submit" class="btn btn-principal">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Guady´s Bloom. Todos los derechos reservados</p>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

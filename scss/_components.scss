@@ -1,0 +1,156 @@
+@use "sass:color";
+
+/* == BOTONES == */
+
+.boton {
+  @include boton($color-principal, black);
+  margin-top: $espaciado-pequeno;
+}
+
+.boton-secundario {
+  @include boton($color-secundario, white);
+  margin-top: $espaciado-pequeno;
+}
+
+.btn-comprar {
+  @include boton($color-principal, #ccc);
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto;
+
+  &:hover {
+    background-color: color.adjust($color-principal, $lightness: -10%);
+    transform: translateY(-3px);
+  }
+}
+
+/* == CARD PRODUCTO == */
+
+.card-producto {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    rgba(230, 179, 230, 0.8) 0%,
+    rgba(200, 109, 215, 0.8) 100%
+  );
+
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+  }
+
+  img:hover {
+    transform: scale(1.05);
+  }
+
+  p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+}
+/* == VIDEO == */
+
+.video-presentacion {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+
+  iframe {
+    max-width: 100%;
+    border: none;
+  }
+}
+
+/* == BENEFICIOS == */
+
+.beneficios {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.beneficio {
+  max-width: 250px;
+  text-align: center;
+}
+
+/* == DESTACADOS == */
+
+.contenedor-destacados {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.card-destacado {
+  width: 100%;
+  max-width: 350px;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: transparent;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: all 0.3s ease;
+
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+
+
+  h3 {
+    font-family: $fuente-secundaria;
+    font-size: 1.3rem;
+    margin: 15px 0 10px 0;
+    color: $color-principal;
+  }
+
+  p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-weight: 300;
+  }
+}

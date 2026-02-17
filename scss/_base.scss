@@ -1,0 +1,99 @@
+/*RESET GLOBAL*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*EVITA DESBORDES HORIZONTALES*/
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*EVITA DESBORDES EN IMAGENES*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*BODY*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $fuente-principal;
+    color: $color-texto;
+
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: $fuente-secundaria;
+    color: $color-secundario;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+main {
+    background-color: transparent;
+    padding: 20px 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+
+    flex:1;
+}
+
+.beneficios-contenido ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+input,
+textarea {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: $color-principal;
+    box-shadow: 0 0 10px rgba($color-principal, 0.3);
+    outline: none;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: auto;
+}
