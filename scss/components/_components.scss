@@ -14,11 +14,22 @@
 
 .btn-comprar {
   @include boton($color-principal, #ccc);
-  display: inline-block;
-  padding: 10px 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px 28px;
   border-radius: 30px;
+
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
   text-decoration: none;
-  transition: all 0.3s ease;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
   margin-top: auto;
 
   &:hover {
@@ -72,6 +83,8 @@
     flex-grow: 1;
   }
 }
+
+
 /* == VIDEO == */
 
 .video-presentacion {
@@ -113,44 +126,105 @@
 
 .card-destacado {
   width: 100%;
-  max-width: 350px;
-  padding: 25px;
-  border-radius: 20px;
+  max-width: 340px;
+  padding: 35px 28px;
+  border-radius: 22px;
+  flex: 1;
   text-align: center;
-  background-color: transparent;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+
+  box-shadow: 
+      0 10px 25px rgba(0, 0, 0, 0.08),
+      0 3px 10px rgba(0, 0, 0, 0.04);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  transition: all 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 
 
   &:hover {
-    transform: scale(1.03);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.15),
+      0 10px 25px rgba(0, 0, 0, 0.08);
   }
 
   img {
     width: 100%;
-    height: 230px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 15px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    transform: scale(1.05);
   }
 
 
   h3 {
     font-family: $fuente-secundaria;
     font-size: 1.3rem;
-    margin: 15px 0 10px 0;
+    margin: 12px 0 10px 0;
     color: $color-principal;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     opacity: 0.8;
     font-weight: 300;
+    margin-bottom: 20px;
   }
+}
+
+/* Slider */
+
+.destacados-slider{
+    display: flex;
+    gap: 30px;
+    scroll-behavior: smooth;
+}
+
+.slider-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Flechas */
+
+.slider-btn{
+    display: none;
+
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+
+    background: white;
+    border: none;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    padding: 12px;
+    border-radius: 50%;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover{
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* posición */
+
+.slider-btn.prev{
+    left: 10px;
+}
+
+.slider-btn.next{
+    right: 10px;
 }

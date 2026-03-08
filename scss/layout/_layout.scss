@@ -1,12 +1,17 @@
-@import "variables";
-@import "mixins";
-
 header {
     background-color: transparent;
     text-align: center;
     padding: $espaciado-pequeno;
     @include flex-center;
 
+}
+
+header img {
+    background: transparent;
+}
+
+h1, h2 {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3 );
 }
 
 nav {
@@ -52,7 +57,7 @@ nav {
         font-weight: 500;
         letter-spacing: 1px;
         position: relative;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .nav-link:hover {
@@ -73,6 +78,39 @@ nav {
     .nav-link:hover::after {
         width: 100%;
     }
+
+    .buscador {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .buscador input {
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        background: transparent;
+        outline: none;
+        padding: 6px 10px;
+        width: 180px;
+        font-size: 0.9rem;
+    }
+
+    .buscador button {
+        border: none;
+        background: none;
+        font-size: 1.2rem;
+        color: #555;
+        cursor: pointer;
+    }
+}
+
+.topbar{
+    background:#6f7f75;
+    color:white;
+    text-align:center;
+    font-size:0.85rem;
+    padding:6px;
+    letter-spacing:0.5px;
 }
 
 /* == ANIMACIONES == */
@@ -174,7 +212,7 @@ footer {
     h1 {
         font-size: 2.8rem;
         margin-bottom: 15px;
-        animation: fadeUp 1s ease forwards;
+        animation: fadeUp 1s ease 0.1s forwards;
     }
 
     .subtitulo {
@@ -264,6 +302,24 @@ footer {
 .destacados {
     text-align: center;
     padding: 40px 20px;
+
+    h2 {
+        font-size: 2.6rem;
+        margin-bottom: 50px;
+        position: relative;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    h2::after {
+        content: "";
+        width: 70px;
+        height: 3px;
+        background: $color-principal;
+        display: block;
+        margin: 15px auto 0;
+        border-radius: 5px;
+
+    }
 }
 
 .contenedor-destacados {
@@ -276,7 +332,24 @@ footer {
 
 section {
     margin: 10px 0;
+    animation: fadeUp 0.8s ease;
+
+    h2 {
+        position: relative;
+        display: inline-block;
+    }
+
+    h2::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        margin: 10px auto 0;
+        background: $color-principal;
+        border-radius: 4px;
+    }
 }
+
 
 /* == PRODUCTOS == */
 
@@ -340,8 +413,8 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 40px;
   padding-left: 0;
-  max-width: 700px;
-  margin: 40px auto;
+  max-width: 600px;
+  margin:0 auto;
   margin-bottom: 60px;
 
   li {
@@ -362,7 +435,7 @@ section {
     transition: all 0.3s ease;
 
     &:hover {
-      transform: translateY(-3px);
+      transform: scale(1.02);
       background: rgba(186, 97, 200, 0.15);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
@@ -473,16 +546,20 @@ section {
 .card-testimonio {
     padding: 35px 30px;
     position: relative;
+
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3 ease ;
 
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
     }
 
 
@@ -491,15 +568,18 @@ section {
         font-size: 3.5rem;
         color: rgba(19, 30, 193, 0.6);
         opacity: 0.8;
+
         position: absolute;
         top: -10px;
-        left: 10px;
+        left: 12px;
+
         font-family: serif;
         font-weight: bold;
     }
 
     p {
         font-style: italic;
+        line-height: 1.6;
     }
 }
 
@@ -555,8 +635,16 @@ section {
     max-width: 1100px;
     margin: 0 auto 50px;
     padding: 0 20px;
-    text-align: left;
+    text-align: center;
     padding-left: 0 ;
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
 }
 
 .contacto-contenido {
@@ -614,12 +702,15 @@ section {
 
     h3 {
         font-size: 1rem;
-        font-weight: 400;
-        opacity: 0.7;
+        font-weight: 500;
+        color: #9c5fae;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
     }
 
     p {
         margin-bottom: 15px;
+        color: #444;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12);
     }
 
     a {
@@ -734,7 +825,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-top: 15px;
+    margin-top: auto;
     padding: 8px 18px;
     border-radius: 25px;
     

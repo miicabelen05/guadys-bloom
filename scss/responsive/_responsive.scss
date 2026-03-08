@@ -1,3 +1,18 @@
+/* TABLET */
+
+@media (max-width: 1024px) {
+
+    .contenedor-destacados {
+        gap: 20px;
+    }
+
+    .card-destacado {
+        max-width: 300px;
+    }
+}
+
+/* MOBILE */
+
 @media (max-width: 768px) {
 
     body {
@@ -9,7 +24,12 @@
     }
 
     main {
-        padding: 20px;
+        padding: 15px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 
     /* NAV */
@@ -53,17 +73,30 @@
     .contenedor-destacados {
         flex-direction: column;
         align-items: stretch;
+        padding: 20px 10px;
     }
 
     .contenedor-testimonios {
         grid-template-columns: 1fr;
     }
 
-    .card-destacado {
-        width: 85%;
-        max-width: 85%;
-        align-items: center;
-        align-self: center;
+    .slider-container {
+        overflow: hidden;
+    }
+
+    .destacados-slider{
+        overflow: hidden;
+        gap: 0;
+    }
+
+    .card-destacado{
+        min-width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .slider-btn{
+        display: block;
     }
 
     /* DIFERENCIALES */
@@ -89,28 +122,18 @@
     /* PRODUCTOS */
     .productos {
         grid-template-columns: 1fr;
+        justify-items: center;
     
         .card-producto {
             flex: none;
-            width: 95%;
-            max-width: 95%;
-        }
-    }
-
-    .card-producto {
-        padding: 20px;
-    
-        .card-body {
-            min-height: auto;
-        }
-
-        p {
-            text-align: left;
+            width: 100%;
+            max-width: 100%;
         }
     }
 
     .lista-productos {
         grid-template-columns: 1fr;
+        justify-items: center;
     }
 
     /* CTA*/
@@ -135,13 +158,69 @@
         width: 100%;
         max-width: 100%;
     }
+
+
+    /* BOTON VER MAS */
+    .ver-mas {
+        width: auto;
+        display: inline-flex;
+        padding: 6px 16px;
+        align-self: center;
+    }
 }
 
-/* BOTON VER MAS */
+/* MOBILE PEQUEÑOS */
 
-.ver-mas {
-    width: auto;
-    display: inline-flex;
-    padding: 6px 16px;
-    align-self: center;
+@media (max-width: 480px) {
+
+    header img {
+        width: 130px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    /* TITULOS */
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    /* HERO */
+
+    .bienvenida {
+        padding: 40px 10px;
+
+        .subtitulo {
+            font-size: 1rem;
+        }
+    }
+
+    /* CARDS */
+
+    .card-destacado {
+        padding: 20px;
+    }
+
+    .card-destacado img {
+        height: 180px;
+    }
+
+    /* BOTONES */
+
+    .ver-mas {
+        padding: 5px 14px;
+        font-size: 0.9rem;
+    }
+
+    .btn-comprar {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
 }
+
