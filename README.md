@@ -39,18 +39,18 @@ El proyecto incluye múltiples páginas HTML estructuradas con una arquitectura 
     - `estilos.css`
     - `estilos.css.map`
 - `/scss`
-    -/base`
-        - _base.scss
-    -/components`
-        - _components.scss
-    -/layout`
+    -`/base`
+        - `_base.scss
+    -`/components`
+        - `_components.scss
+    -`/layout`
         - _layout.scss
-    -/responsive`
+    -`/responsive`
         - _responsive.scss
-    -/utilities`
+    -`/utilities`
         - _variables.scss
         - _mixins.scss
-    - _main.scss
+    - `main.scss    
 - `/img`
     - fondo.jpg
     - imagen1.jpg
@@ -66,9 +66,9 @@ El sitio se adapta completamente a dispositivos móviles mediante media queries 
 ## Sitio online
 GitHub Pages:  
     https://miicabelen05.github.io/guadys-bloom/
-Host:
-    https://guadys-bloom.vercel.app
 
+Hosting (Versel)
+    https://guadys-bloom.vercel.app
 
 ## Repositorio del Proyecto
     https://github.com/miicabelen05/guadys-bloom
