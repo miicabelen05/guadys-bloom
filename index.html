@@ -32,8 +32,10 @@
     <div class="topbar">
         ✨ Envíos a todo el país – 10% OFF por transferencia
     </div>
+
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
+
             <form class="buscador" role="search">
                 <input type="search" placeholder="Buscar productos...">
                 <button type="submit">
@@ -41,10 +43,24 @@
                 </button>
             </form>
 
+            <!-- BOTON HAMBURGUESA -->
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls="menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- MENU -->
             <div class="collapse navbar-collapse" id="menu">
+
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link active" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pages/productos.html">Productos</a>
@@ -53,7 +69,9 @@
                         <a class="nav-link" href="pages/contacto.html">Contacto</a>
                     </li>
                 </ul>
+
             </div>
+
         </div>
     </nav>
 
@@ -167,8 +185,11 @@
         </section>
 
         <section class="video-seccion">
-            <h2>🌹Descubrí nuestra esencia🌹</h2>
-            <p>✋Conocé como elaboramos nuestros productos y qué nos inspira...</p>
+            <div class="video-intro">
+                <h2>🌹Descubrí nuestra esencia🌹</h2>
+                <p>✋Conocé como elaboramos nuestros productos y qué nos inspira...</p>
+            </div>
+            
             <figure class="video-presentacion">
                  <iframe 
                     src="https://drive.google.com/file/d/12a-801G72YytWHJoLleKTi28aQxKbRcf/preview"

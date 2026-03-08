@@ -87,6 +87,16 @@
 
 /* == VIDEO == */
 
+.video-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+
+  p {
+    text-align: center;
+  }
+}
+
 .video-presentacion {
   display: flex;
   justify-content: center;
@@ -108,6 +118,15 @@
   flex-wrap: wrap;
 }
 
+.beneficios h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.beneficios p {
+    text-align: left;
+}
+
 .beneficio {
   max-width: 250px;
   text-align: center;
@@ -126,9 +145,9 @@
 
 .card-destacado {
   width: 100%;
-  max-width: 340px;
-  padding: 35px 28px;
-  border-radius: 22px;
+  max-width: 350px;
+  padding: 30px 25px;
+  border-radius: 20px;
   flex: 1;
   text-align: center;
 
@@ -175,6 +194,7 @@
     opacity: 0.8;
     font-weight: 300;
     margin-bottom: 20px;
+    flex-grow: 1;
   }
 }
 
@@ -213,6 +233,8 @@
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 
     transition: all 0.3s ease;
+
+    z-index: 10;
 }
 
 .slider-btn:hover{

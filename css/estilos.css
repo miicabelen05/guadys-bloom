@@ -137,6 +137,9 @@ nav ul li a {
   backdrop-filter: blur(10px);
   padding: 15px 30px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .navbar-custom .navbar-brand {
   font-family: "Playfair Display", serif;
@@ -167,6 +170,9 @@ nav ul li a {
   transition: width 0.3s ease;
 }
 .navbar-custom .nav-link:hover::after {
+  width: 100%;
+}
+.navbar-custom .nav-link:active::after {
   width: 100%;
 }
 .navbar-custom .buscador {
@@ -397,8 +403,21 @@ footer {
 }
 
 section {
-  margin: 10px 0;
+  padding: 40px 0;
   animation: fadeUp 0.8s ease;
+}
+section h2 {
+  position: relative;
+  display: inline-block;
+}
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 10px auto 0;
+  background: #ba61c8;
+  border-radius: 4px;
 }
 
 /* == PRODUCTOS == */
@@ -454,8 +473,9 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 40px;
   padding-left: 0;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
   margin-bottom: 60px;
 }
 .lista-productos li {
@@ -842,7 +862,7 @@ section {
 
 .ver-mas::after {
   content: "";
-  position: relative;
+  position: absolute;
   width: 0;
   height: 2px;
   background: #ba61c8;
@@ -895,7 +915,7 @@ section {
   font-weight: 500;
   letter-spacing: 0.5px;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3 ease, background-color 0.3 ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   margin-top: auto;
 }
 .btn-comprar:hover {
@@ -939,6 +959,15 @@ section {
 }
 
 /* == VIDEO == */
+.video-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.video-intro p {
+  text-align: center;
+}
+
 .video-presentacion {
   display: flex;
   justify-content: center;
@@ -958,6 +987,15 @@ section {
   flex-wrap: wrap;
 }
 
+.beneficios h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.beneficios p {
+  text-align: left;
+}
+
 .beneficio {
   max-width: 250px;
   text-align: center;
@@ -975,9 +1013,9 @@ section {
 
 .card-destacado {
   width: 100%;
-  max-width: 340px;
-  padding: 35px 28px;
-  border-radius: 22px;
+  max-width: 350px;
+  padding: 30px 25px;
+  border-radius: 20px;
   flex: 1;
   text-align: center;
   background: rgba(255, 255, 255, 0.35);
@@ -1011,6 +1049,7 @@ section {
   opacity: 0.8;
   font-weight: 300;
   margin-bottom: 20px;
+  flex-grow: 1;
 }
 
 /* Slider */
@@ -1040,6 +1079,7 @@ section {
   border-radius: 50%;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
+  z-index: 10;
 }
 
 .slider-btn:hover {
@@ -1080,16 +1120,24 @@ section {
     height: auto;
   }
   /* NAV */
-  nav ul li {
-    display: block;
-    margin: 10px 0;
+  .navbar-nav {
+    width: 100%;
     text-align: center;
+  }
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    display: block;
   }
   .navbar-custom .navbar-collapse {
     background: rgba(255, 255, 255, 0.95);
     padding: 20px;
     border-radius: 20px;
     margin-top: 10px;
+    text-align: center;
   }
   .nav-custom .nav-link {
     text-align: center;
@@ -1142,6 +1190,11 @@ section {
   .diferenciales-grid p,
   .beneficio p {
     text-align: center;
+  }
+  .beneficios h2 {
+    font-size: 2.4rem;
+    line-height: 1.3;
+    padding: 0 10px;
   }
   /* TESTIMONIOS */
   .testimonios-grid {

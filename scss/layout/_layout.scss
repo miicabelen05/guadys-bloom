@@ -42,6 +42,9 @@ nav {
     backdrop-filter: blur(10px);
     padding: 15px 30px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .navbar-brand {
         font-family: $fuente-secundaria;
@@ -76,6 +79,10 @@ nav {
     }
 
     .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .nav-link:active::after {
         width: 100%;
     }
 
@@ -331,7 +338,7 @@ footer {
 }
 
 section {
-    margin: 10px 0;
+    padding: 40px 0;
     animation: fadeUp 0.8s ease;
 
     h2 {
@@ -413,8 +420,9 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 40px;
   padding-left: 0;
-  max-width: 600px;
-  margin:0 auto;
+  width: 100%;
+  max-width: 900px;
+  margin:0 auto 60px auto;
   margin-bottom: 60px;
 
   li {

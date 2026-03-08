@@ -1,8 +1,9 @@
 # Guady´s Bloom
+Sitio Web de cosmética natural desarrollado como proyecto final para el curso de Desarrollo Web.
 
 ## Descripción
-Guady’s Bloom es un sitio web desarrollado como proyecto integrador del curso de Desarrollo Web.
-Se trata de una marca ficticia de cosmética natural artesanal, enfocada en una estética delicada, moderna y responsive.
+Se trata de una marca de cosmética natural artesanal, enfocada en una estética delicada, moderna y responsive.
+Es una pagina enfocada en la presentación de los productos que se ofrecen de cosmética natural mostrando sus beneficios junto con un formulario de contacto con todos los datos reales del emprendimiento.
 
 El proyecto incluye múltiples páginas HTML estructuradas con una arquitectura organizada en SASS, aplicando buenas prácticas de maquetado y diseño responsive.
 
@@ -15,6 +16,7 @@ El proyecto incluye múltiples páginas HTML estructuradas con una arquitectura 
 - Bootstrap (solo para componentes específicos como navbar)
 - Bootstrap Icons
 - Formspree (integración de formulario funcional)
+- Git & GitHub
 
 ## Características principales
     ✔ Diseño responsive completo (mobile-first adaptado)
@@ -37,12 +39,17 @@ El proyecto incluye múltiples páginas HTML estructuradas con una arquitectura 
     - `estilos.css`
     - `estilos.css.map`
 - `/scss`
-    - _base.scss
-    - _components.scss
-    - _layout.scss
-    - _mixins.scss
-    - _responsive.scss
-    - _variables.scss
+    -/base`
+        - _base.scss
+    -/components`
+        - _components.scss
+    -/layout`
+        - _layout.scss
+    -/responsive`
+        - _responsive.scss
+    -/utilities`
+        - _variables.scss
+        - _mixins.scss
     - _main.scss
 - `/img`
     - fondo.jpg
@@ -59,6 +66,14 @@ El sitio se adapta completamente a dispositivos móviles mediante media queries 
 ## Sitio online
 GitHub Pages:  
     https://miicabelen05.github.io/guadys-bloom/
+Host:
+    https://guadys-bloom.vercel.app
+
+
+## Repositorio del Proyecto
+    https://github.com/miicabelen05/guadys-bloom
+
+
 
 ## Autor/a
 - Gallego Micaela Belen
